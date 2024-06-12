@@ -32,7 +32,7 @@ def scroll_horizontal(image, position):
         scrolled_image[width*(i-1):width*i] = (image[position+(width*(i-1)):(width*i)] + image[width*(i-1):position+(width*(i-1))])
     return(scrolled_image)
 
-file = open(file,'r')
+file = open(("filez/"+file),'r')
 pixelList = list()
 pixelList = file.readlines()
 
