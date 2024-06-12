@@ -7,6 +7,8 @@ import time
 import board
 import neopixel
 
+file = "HAT_ART_LIST.txt"
+
 brightness = 0.2
 pixel_pin = board.D0
 hight = 8
@@ -30,7 +32,7 @@ def scroll_horizontal(image, position):
         scrolled_image[width*(i-1):width*i] = (image[position+(width*(i-1)):(width*i)] + image[width*(i-1):position+(width*(i-1))])
     return(scrolled_image)
 
-file = open('HAT_ART_LIST.txt','r')
+file = open(file,'r')
 pixelList = list()
 pixelList = file.readlines()
 
